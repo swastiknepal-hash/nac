@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | Yamaha Narayangarh</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+    }
+    .navbar { background: #002147 !important; }
+    .navbar-brand span { font-weight: 600; font-size: 1.25rem; }
+    .page-header {
+      background: url('service-banner.jpg') center/cover no-repeat;
+      padding: 120px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .form-section {
+      background: #111;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+    }
+    .form-label { color: #ccc; }
+    .form-control, .form-select {
+      background: #222;
+      border: 1px solid #444;
+      color: #eee;
+    }
+    .btn-primary {
+      background: #00bfff;
+      border: none;
+      width: 100%;
+    }
+    .btn-primary:hover { background: #1e90ff; }
+    footer {
+      background-color: #002147;
+      color: white;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Logo.png" alt="Logo" height="40" class="me-2">
+        <span>Yamaha Narayangarh</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="motorcycle.html" class="nav-link">Motorcycles</a></li>
+          <li class="nav-item"><a href="scooter.html" class="nav-link">Scooters</a></li>
+         <li class="nav-item"><a href="spare parts.html" class="nav-link">Spare Parts</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+          <li class="nav-item"><a href="events and offers.html" class="nav-link">Offers/Events</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Spacer -->
+  <div style="height: 70px;"></div>
+
+  <!-- Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Yamaha Express Service (YES)</h1>
+      <p class="lead">Quick, convenient, and quality maintenance at your fingertips :contentReference[oaicite:1]{index=1}</p>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-info text-center mb-4">Book a Service Appointment</h2>
+      <div class="form-section mx-auto" style="max-width:600px;">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Full Name *</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Mobile Number *</label>
+            <input type="tel" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Profession *</label>
+            <select class="form-select" required>
+              <option selected disabled>Choose Profession</option>
+              <option>Online Delivery Service</option>
+              <option>Food Delivery Service</option>
+              <option>Ride Sharing Service</option>
+              <option>Private Service</option>
+              <option>Government Service</option>
+              <option>Business Owner</option>
+              <option>House Wife</option>
+              <option>Student</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Model *</label>
+            <select class="form-select" required>
+              <option selected disabled>Select Model</option>
+              <option>AEROX 155</option>
+              <option>FZ-S V3</option>
+              <option>MT-15</option>
+              <option>R15 V4</option>
+              <option>Ray ZR 125</option>
+              <!-- add more -->
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Preferred Date *</label>
+            <input type="date" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Preferred Service Location *</label>
+            <select class="form-select" required>
+              <option selected disabled>Select Center</option>
+              <option>Narayangarh</option>
+              <option>Kathmandu – Tripureshwor</option>
+              <option>Pokhara</option>
+              <option>Butwal</option>
+              <!-- add more -->
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Preferred Time Slot *</label>
+            <select class="form-select" required>
+              <option selected disabled>Select Time</option>
+              <option>Morning (9am–12pm)</option>
+              <option>Afternoon (12pm–3pm)</option>
+              <option>Evening (3pm–6pm)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Submit Booking</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="py-3 bg-dark">
+    <div class="container text-center">
+      <p>Toll Free (NTC): <strong>16600111044</strong> | Toll Free (NCELL): <strong>9801570044</strong></p>
+      <p>Email: <strong>yamaha.customercare@mawnepal.com</strong></p>
+      <p>M.A.W Enterprises Pvt. Ltd., Tripureshwor, Kathmandu</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">© 2025 Navin Auto Centre – Yamaha Narayangarh</p>
+      <p class="mb-0">Experience professional and timely service!</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
