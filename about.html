@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yamaha Narayangarh | About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    .navbar {
+      background-color: #002147;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #00bfff;
+    }
+    .section {
+      padding: 4rem 0;
+    }
+    h2.section-title {
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #00bfff;
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .about-image {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
+      margin-bottom: 2rem;
+    }
+    .highlight {
+      color: #00bfff;
+      font-weight: 700;
+    }
+    .values-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .values-list li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+    .values-list li::before {
+      content: "\f00c"; /* FontAwesome check icon */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #00bfff;
+    }
+    footer {
+      background-color: #111;
+      padding: 40px 0 20px;
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+    footer h5 {
+      color: #00bfff;
+      margin-bottom: 20px;
+    }
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #00bfff;
+    }
+    footer .social-icons a {
+      font-size: 1.3rem;
+      margin-right: 15px;
+      color: #bbb;
+      transition: color 0.3s ease;
+    }
+    footer .social-icons a:hover {
+      color: #00bfff;
+    }
+    footer .row > div {
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      footer .row > div {
+        margin-bottom: 0;
+      }
+    }
+
+    /* Testimonial Styles */
+    .testimonial-section {
+      background-color: #001529;
+      padding: 4rem 0;
+      color: #fff;
+      text-align: center;
+    }
+    .testimonial-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonial-slide {
+      display: none;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #ccc;
+      min-height: 150px;
+      padding: 0 2rem;
+    }
+    .testimonial-slide.active {
+      display: block;
+      animation: fadeIn 1s ease forwards;
+    }
+    .testimonial-author {
+      margin-top: 15px;
+      font-weight: 700;
+      color: #00bfff;
+      font-size: 1rem;
+    }
+    .testimonial-controls {
+      margin-top: 20px;
+    }
+    .testimonial-controls button {
+      background: transparent;
+      border: 2px solid #00bfff;
+      color: #00bfff;
+      font-size: 1.2rem;
+      padding: 6px 14px;
+      margin: 0 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .testimonial-controls button:hover {
+      background-color: #00bfff;
+      color: #000;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Gallery Styles */
+    .gallery-section {
+      padding: 4rem 0;
+      background-color: #000814;
+      text-align: center;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      background-color: #001f3f;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+      border-radius: 12px;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Logo.png" alt="Logo" class="me-2" />
+        Yamaha Narayangarh
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="motorcycle.html" class="nav-link">Motorcycles</a></li>
+          <li class="nav-item"><a href="scooter.html" class="nav-link">Scooters</a></li>
+          <li class="nav-item"><a href="spare parts.html" class="nav-link">Spare Parts</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="events and offers.html" class="nav-link">Offers/Events</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div style="height: 70px;"></div>
+
+  <!-- About Yamaha Narayangarh -->
+  <section class="section container" data-aos="fade-up">
+    <h2 class="section-title">About Yamaha Narayangarh</h2>
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6" data-aos="fade-right">
+        <img
+          src="showroom-inside.jpg"
+          alt="Yamaha Narayangarh Showroom"
+          class="about-image"
+        />
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <p>
+          Welcome to <span class="highlight">Yamaha Narayangarh</span>, the premier Yamaha dealership in Chitwan. Operated by
+          <strong>Navin Auto Centre</strong>, we take pride in being the official authorized dealer for Yamaha motorcycles and scooters in the region.
+        </p>
+        <p>
+          With over <strong>20 years</strong> of trusted service, our mission is to provide quality Yamaha products, expert service, and excellent customer support to all riders — from beginners to seasoned enthusiasts.
+        </p>
+        <p>
+          Our experienced team is dedicated to helping you find the perfect Yamaha vehicle that suits your lifestyle, whether it's for daily commuting, touring, or adventure.
+        </p>
+        <h5 class="mt-4 mb-3">Our Core Values</h5>
+        <ul class="values-list">
+          <li>Customer satisfaction with personalized attention</li>
+          <li>Genuine Yamaha spare parts and accessories</li>
+          <li>Expert maintenance and service facilities</li>
+          <li>Reliable and transparent pricing</li>
+          <li>Community engagement and rider safety programs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Yamaha Nepal -->
+  <section class="section container" data-aos="fade-up">
+    <h2 class="section-title">About Yamaha Nepal</h2>
+    <div class="row align-items-center gy-4 flex-lg-row-reverse">
+      <div class="col-lg-6" data-aos="fade-left">
+        <img
+          src="yamaha-nepal-showroom.jpg"
+          alt="Yamaha Nepal"
+          class="about-image"
+        />
+      </div>
+      <div class="col-lg-6" data-aos="fade-right">
+        <p>
+          Yamaha Motor Nepal Pvt. Ltd. is a subsidiary of Yamaha Motor Company, Japan — a world leader in two-wheeler manufacturing and technology innovation.
+        </p>
+        <p>
+          Since entering the Nepalese market, Yamaha has rapidly grown to become the <span class="highlight">No. 1 bike company in Nepal</span> thanks to its unmatched product quality, fuel efficiency, and cutting-edge designs.
+        </p>
+        <p>
+          Yamaha bikes and scooters are favored for their powerful performance, durable engines, and low maintenance costs — making them the top choice for millions of riders across Nepal.
+        </p>
+        <p>
+          Yamaha Nepal’s extensive dealer network, including trusted partners like <strong>Yamaha Narayangarh</strong>, ensures customers receive the best sales experience and after-sales service in the country.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonial-section" data-aos="fade-up">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-slide active">
+        <p>"Yamaha Narayangarh helped me find the perfect bike with amazing service and honest advice. Highly recommend!"</p>
+        <div class="testimonial-author">— Suresh Thapa</div>
+      </div>
+      <div class="testimonial-slide">
+        <p>"The genuine spare parts and quick servicing keep my Yamaha running like new. Trustworthy dealership!"</p>
+        <div class="testimonial-author">— Anita Gurung</div>
+      </div>
+      <div class="testimonial-slide">
+        <p>"Best experience buying a scooter here. The staff is friendly and very knowledgeable."</p>
+        <div class="testimonial-author">— Bikash Shrestha</div>
+      </div>
+      <div class="testimonial-slide">
+        <p>"Yamaha Nepal’s bikes are the most reliable on Nepal’s roads. Proud to own a Yamaha from Narayangarh showroom."</p>
+        <div class="testimonial-author">— Prakash Rai</div>
+      </div>
+
+      <div class="testimonial-controls mt-4">
+        <button aria-label="Previous testimonial" id="prevBtn">&#10094;</button>
+        <button aria-label="Next testimonial" id="nextBtn">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section" data-aos="fade-up">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="gallery1.jpg" alt="Gallery Image 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="gallery2.jpg" alt="Gallery Image 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="gallery3.jpg" alt="Gallery Image 3" />
+      </div>
+      <div class="gallery-item">
+        <img src="gallery4.jpg" alt="Gallery Image 4" />
+      </div>
+      <div class="gallery-item">
+        <img src="gallery5.jpg" alt="Gallery Image 5" />
+      </div>
+      <div class="gallery-item">
+        <img src="gallery6.jpg" alt="Gallery Image 6" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-wrap gap-3">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="motorcycle.html">Motorcycles</a></li>
+            <li><a href="scooter.html">Scooters</a></li>
+            <li><a href="spare parts.html">Spare Parts</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events and offers.html">Offers/Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="social-icons mb-2">
+            <a href="https://www.facebook.com/YamahaNarayangarh" target="_blank" aria-label="Facebook" rel="noopener">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/YamahaNarayangarh" target="_blank" aria-label="YouTube" rel="noopener">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/YamahaNarayangarh" target="_blank" aria-label="Instagram" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <p>&copy; 2025 Navin Auto Centre – Yamaha Narayangarh. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="//code.tidio.co/gz5ovafvefpz22khfntkxotsk82jnl5p.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+
+    // Testimonial slider
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? slides.length -1 : currentIndex - 1;
+      showSlide(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === slides.length -1) ? 0 : currentIndex + 1;
+      showSlide(currentIndex);
+    });
+
+    // Optional: auto-slide every 7 seconds
+    setInterval(() => {
+      currentIndex = (currentIndex === slides.length -1) ? 0 : currentIndex + 1;
+      showSlide(currentIndex);
+    }, 7000);
+  </script>
+</body>
+</html>
